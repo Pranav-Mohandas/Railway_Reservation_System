@@ -61,9 +61,9 @@ Stores booked ticket details linked to payment and train.
 
 3. Passenger Management: Auto-fetch or add new passenger info.
 
-Dynamic Payment: Randomized payment amounts and payment type options.
+4. Dynamic Payment: Randomized payment amounts and payment type options.
 
-Ticket Booking: Complete booking workflow linked with payments.
+5. Ticket Booking: Complete booking workflow linked with payments.
 
-History Views: View past tickets and payment transactions.
+6. History Views: View past tickets and payment transactions.
 
