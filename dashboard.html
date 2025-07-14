@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Reservation - Dashboard</title>
+    <link rel="stylesheet" href="styledash.css">
+</head>
+<body>
+    <header>
+        <h1>Railway Reservation System</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="profileBtn">Profile</a></li>
+                <li><a href="#" id="bookTicketsBtn">Book Tickets</a></li>
+                <li><a href="#" id="pastTicketsBtn">Past Tickets</a></li>
+                <li><a href="#" id="paymentHistoryBtn">Payment History</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="welcome">
+        <h2>Welcome, <span id="username"></span>!</h2>
+        <p>Plan your journey with ease.</p>
+    </section>
+
+    <main>
+        <!-- ✅ Profile Section -->
+        <section id="profileSection" class="hidden">
+            <h2>User Profile</h2>
+            <p><strong>User ID:</strong> <span id="userid"></span></p>
+            <p><strong>Name:</strong> <span id="username"></span></p>
+            <p><strong>Mobile:</strong> <span id="Mobile_number"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+        </section>
+
+        <section id="bookingSection" class="hidden">
+  <h2>Book Ticket</h2>
+  <form id="bookingForm">
+    <label>Name: <input type="text" id="name" required></label><br>
+    <label>Mobile Number: <input type="text" id="mobile_number" required></label><br>
+    <label>Aadhar: <input type="text" id="aadhar"></label><br>
+    <label>Age: <input type="number" id="age"></label><br>
+    <label>Gender:
+      <select id="gender">
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </label><br>
+
+
+    <label>Train Number:
+      <select id="train_no" required></select>
+    </label><br>
+
+    <div id="trainDetails">
+      <p><strong>Train Name:</strong> <span id="trainName">--</span></p>
+      <p><strong>Source:</strong> <span id="source">--</span></p>
+      <p><strong>Destination:</strong> <span id="destination">--</span></p>
+      <p><strong>Class:</strong> <span id="reservation_type">--</span></p>
+    </div>
+    
+
+    <button type="submit">Book Ticket</button>
+  </form>
+</section>
+
+
+        <!-- ✅ Past Tickets Section -->
+        <section id="pastTicketsSection" class="hidden">
+            <h2>Past Tickets</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Ticket ID</th>
+                        <th>Transaction ID</th>
+                        <th>Train Number</th>
+                        <th>Train Name</th>
+                        <th>Class</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Status</th>
+                        <th>Date & Time</th>
+                    </tr>
+                </thead>
+                <tbody id="pastTicketsTable">
+                    <!-- Ticket Data Will Be Inserted Here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ✅ Payment History Section -->
+        <section id="paymentHistorySection" class="hidden">
+            <h2>Payment History</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Payment Type</th>
+                        <th>Amount (₹)</th>
+                        <th>Confirmation</th>
+                    </tr>
+                </thead>
+                <tbody id="paymentHistoryTable">
+                    <!-- Payment Data Will Be Inserted Here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="scriptdash.js"></script>
+</body>
+</html>
